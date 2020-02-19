@@ -1,0 +1,5 @@
+﻿<linker>
+  <assembly fullname="Wiki.Blazor">
+    <type fullname="*" required="true" />
+  </assembly>
+</linker>
