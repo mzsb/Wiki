@@ -1,0 +1,18 @@
+﻿
+@viewModel.Label
+<video class="video" controls>
+
+    <source src="@viewModel.Source"
+            type="video/mp4">
+
+    <source src="@viewModel.Source"
+            type="video/ogg">
+
+    Your browser does not support the video tag.
+
+</video>
+
+@code {
+    [Parameter]
+    public VideoClaimDataItemViewModel viewModel { get; set; }
+}

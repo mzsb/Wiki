@@ -1,9 +1,13 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Wiki.BLL.Helpers;
+using Wiki.Shared;
+using Wiki.Shared.Pages;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -23,6 +27,8 @@ namespace Wiki
     /// </summary>
     sealed partial class App : Application
     {
+        public static ServiceProvider serviceProvider { get; private set; }
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -32,6 +38,10 @@ namespace Wiki
             ConfigureFilters(global::Uno.Extensions.LogExtensionPoint.AmbientLoggerFactory);
 
             this.InitializeComponent();
+
+            serviceProvider = ServiceConfigHelper.Create()
+                                                 .BuildServiceProvider();
+
             this.Suspending += OnSuspending;
         }
 
@@ -75,7 +85,7 @@ namespace Wiki
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    rootFrame.Navigate(typeof(EntityPage), e.Arguments);
                 }
                 // Ensure the current window is active
                 Windows.UI.Xaml.Window.Current.Activate();

@@ -1,0 +1,44 @@
+﻿.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center
+}
+
+    .search > div {
+        margin-top: 7px;
+        margin-right: 2px
+    }
+
+@media (min-width: 875px) {
+
+    .search {
+        justify-content: center;
+    }
+
+    .search > div {
+        justify-self: flex-start;
+        min-width: 500px;
+    }
+}
+
+.navigation-item-link {
+    width: 100px;
+}
+
+.navigation-item-text {
+    align-self: end;
+}
+
+.label {
+    font-size: 26px;
+    font-family: 'MS PGothic'
+}
+

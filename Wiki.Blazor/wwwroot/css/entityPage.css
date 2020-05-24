@@ -1,0 +1,50 @@
+﻿
+:root {
+    --main-text-color: dark;
+}
+
+.body {
+    color: dimgray
+}
+
+.image {
+    width: 50%
+}
+
+    .image:hover {
+        cursor: pointer;
+    }
+
+.video {
+    width: 50%
+}
+
+    .video:hover {
+        cursor: pointer;
+    }
+
+.rank {
+    align-items: end;
+    font-style: italic
+}
+
+
+.name-label {
+    align-items: start;
+    width: 30%;
+    background: transparent !important
+}
+    .name-label .link-text {
+        margin-right: 5px
+    }
+
+    .name-label .ui-panel-titlebar-icon {
+        width: 15px;
+        height: 15px;
+        font-size: 8px;
+        align-self: center
+    }
+
+    .name-label .ui-panel-content {
+        margin: 0 0 0 0
+    }

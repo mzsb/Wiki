@@ -1,0 +1,150 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:viewmodels="using:Wiki.BLL.ViewModels" 
+    xmlns:usercontrols="using:Wiki.Shared.UserControls" 
+    xmlns:converters="using:Wiki.Shared.Converters">
+
+    <converters:NullToBoolConverter x:Key="NullToBoolConverter" />
+    <converters:CollectionIsEmptyToBoolConverter x:Key="CollectionIsEmptyToBoolConverter" />
+    
+    <!-- Entity -->
+    <DataTemplate x:Key="EntityClaimDataTemplate"
+                  x:DataType="viewmodels:EntityClaimDataItemViewModel">
+
+        <usercontrols:ClaimObject ClaimData="{x:Bind}"
+                                  Margin="10,10,10,10">
+            <usercontrols:ClaimObject.InnerContent>
+                <usercontrols:Panel IsOpenable="{x:Bind OtherLanguageLabels, Converter={StaticResource CollectionIsEmptyToBoolConverter}}">
+                    <usercontrols:Panel.Header>
+                        <HyperlinkButton Content="{x:Bind Label}"
+                                 Command="{x:Bind Command}"
+                                 Foreground="{StaticResource LinkBlue}" />
+                    </usercontrols:Panel.Header>
+                    <usercontrols:Panel.InnerContent>
+                        <TextBlock Text="{x:Bind OtherLanguageLabelsStringList}"
+                                   Foreground="{StaticResource Black}"/>
+                    </usercontrols:Panel.InnerContent>
+                </usercontrols:Panel>
+            </usercontrols:ClaimObject.InnerContent>
+        </usercontrols:ClaimObject>
+
+    </DataTemplate>
+
+    <!-- String -->
+    <DataTemplate x:Key="StringClaimDataTemplate" 
+                  x:DataType="viewmodels:StringClaimDataItemViewModel">
+
+        <usercontrols:ClaimObject ClaimData="{x:Bind}"
+                                  Margin="10,10,10,10">
+            <usercontrols:ClaimObject.InnerContent>
+                <TextBlock Text="{x:Bind Label}" 
+                           Foreground="{StaticResource Black}"/>
+            </usercontrols:ClaimObject.InnerContent>
+        </usercontrols:ClaimObject>
+
+    </DataTemplate>
+
+    <!-- Image -->
+    <DataTemplate x:Key="ImageClaimDataTemplate"
+                  x:DataType="viewmodels:ImageClaimDataItemViewModel">
+
+        <usercontrols:ClaimObject ClaimData="{x:Bind}"
+                                  Margin="10,10,10,10">
+            <usercontrols:ClaimObject.InnerContent>
+                <StackPanel Orientation="Vertical">
+
+                    <TextBlock Text="{x:Bind Label}" 
+                               Foreground="{StaticResource Black}" />
+
+                    <Button Command="{x:Bind Command}">
+
+                        <Button.Content>
+
+                            <Image Width="400"
+                                   Source="{x:Bind Source}"/>
+
+                        </Button.Content>
+
+                    </Button>
+
+                </StackPanel>
+            </usercontrols:ClaimObject.InnerContent>
+        </usercontrols:ClaimObject>
+
+    </DataTemplate>
+
+    <!-- Quantity -->
+    <DataTemplate x:Key="QuantityClaimDataTemplate"
+                  x:DataType="viewmodels:QuantityClaimDataItemViewModel">
+
+        <usercontrols:ClaimObject ClaimData="{x:Bind}"
+                                  Margin="10,10,10,10">
+            <usercontrols:ClaimObject.InnerContent>
+                <StackPanel Grid.Row="1"
+                            Orientation="Horizontal">
+
+                    <TextBlock Text="{x:Bind Amount}" 
+                               Foreground="{StaticResource Black}"
+                               VerticalAlignment="Center"
+                               Margin="0,0,5,0"/>
+
+                    <HyperlinkButton Content="{x:Bind Label}" 
+                                     Command="{x:Bind Command}"
+                                     VerticalAlignment="Center"
+                                     Foreground="{StaticResource LinkBlue}"
+                                     IsEnabled="{x:Bind UnitId, Converter={StaticResource NullToBoolConverter}}"/>
+
+                </StackPanel>
+            </usercontrols:ClaimObject.InnerContent>
+        </usercontrols:ClaimObject>
+
+    </DataTemplate>
+
+    <!-- Video -->
+    <DataTemplate x:Key="VideoClaimDataTemplate"
+                  x:DataType="viewmodels:VideoClaimDataItemViewModel">
+
+        <usercontrols:ClaimObject ClaimData="{x:Bind}"
+                                  Margin="10,10,10,10">
+            <usercontrols:ClaimObject.InnerContent>
+                <HyperlinkButton Content="{x:Bind Label}"
+                                 NavigateUri="{x:Bind Source}"
+                                 Foreground="{StaticResource LinkBlue}"/>
+            </usercontrols:ClaimObject.InnerContent>
+        </usercontrols:ClaimObject>
+
+    </DataTemplate>
+
+    <!-- Audio -->
+    <DataTemplate x:Key="AudioClaimDataTemplate"
+                  x:DataType="viewmodels:AudioClaimDataItemViewModel">
+
+        <usercontrols:ClaimObject ClaimData="{x:Bind}"
+                                  Margin="10,10,10,10">
+            <usercontrols:ClaimObject.InnerContent>
+                <HyperlinkButton Grid.Row="1"
+                             Content="{x:Bind Label}"
+                             NavigateUri="{x:Bind Source}"
+                             Foreground="{StaticResource LinkBlue}"/>
+            </usercontrols:ClaimObject.InnerContent>
+        </usercontrols:ClaimObject>
+
+    </DataTemplate>
+
+    <!-- Unknown -->
+    <DataTemplate x:Key="UnknownClaimDataTemplate" 
+                  x:DataType="viewmodels:UnknownClaimDataItemViewModel">
+
+        <usercontrols:ClaimObject ClaimData="{x:Bind}"
+                                  Margin="10,10,10,10">
+            <usercontrols:ClaimObject.InnerContent>
+                <TextBlock Grid.Row="1"
+                           Text="{x:Bind Label}" 
+                           Foreground="{StaticResource Black}" />
+            </usercontrols:ClaimObject.InnerContent>
+        </usercontrols:ClaimObject>
+
+    </DataTemplate>
+    
+</ResourceDictionary>

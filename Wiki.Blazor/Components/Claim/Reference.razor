@@ -1,0 +1,44 @@
+﻿@using System.Collections.ObjectModel
+
+<RadzenPanel AllowCollapse="true"
+             Collapsed="true">
+    <HeaderTemplate>
+        References(@References.Count)
+    </HeaderTemplate>
+    <ChildContent>
+        <RadzenGrid AllowFiltering="false"
+                    AllowSorting="false"
+                    AllowPaging="false"
+                    Data="References">
+            <Columns>
+                <Radzen.Blazor.RadzenGridColumn TItem="ReferenceItemViewModel"
+                                                Title="Statement">
+                    <Template Context="reference">
+
+                        @GetSpecificComponent(reference.Predicate)
+
+                    </Template>
+
+                </Radzen.Blazor.RadzenGridColumn>
+                <Radzen.Blazor.RadzenGridColumn TItem="ReferenceItemViewModel"
+                                                Title="Objects">
+                    <Template Context="reference">
+                        @foreach (var claimData in reference.Objects)
+                        {
+                            @GetSpecificComponent(claimData)
+                        }
+                    </Template>
+
+                </Radzen.Blazor.RadzenGridColumn>
+            </Columns>
+        </RadzenGrid>
+    </ChildContent>
+</RadzenPanel>
+
+@code {
+    [Parameter]
+    public ObservableCollection<ReferenceItemViewModel> References { get; set; }
+
+    [Parameter]
+    public Func<ClaimDataItemViewModel, RenderFragment> GetSpecificComponent { get; set; }
+}

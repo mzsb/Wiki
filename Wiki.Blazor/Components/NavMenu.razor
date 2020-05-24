@@ -1,0 +1,72 @@
+﻿@inject NavigationManager navigationManager
+@inject SearchComponentViewModel viewModel
+@inject IJSRuntime JSRuntime;
+
+<RadzenMenu Attributes="@(new Dictionary<string, object> { { "class", "nav" } })">
+
+    <div class="col-md-3">
+        <RadzenLink Path="entity/default"
+                    Text="WikiAssembly"
+                    Attributes="@(new Dictionary<string, object> { { "class", "label" } })" />
+    </div>
+
+    <div class="col-md-6 search">
+
+        <RadzenAutoComplete Data="@viewModel.SearchResultItemViewModels"
+                            Change="@(v => ItemSelected(v))"
+                            TextProperty="Label"
+                            @oninput="@(async args => await SearchAsync(args))"
+                            Placeholder="Search"
+                            LoadData="@SetSearchDescription" />
+
+        <Radzen.Blazor.RadzenButton Click="@ButtonClicked"
+                                    ButtonType="Radzen.ButtonType.Submit"
+                                    ButtonStyle="Radzen.ButtonStyle.Primary"
+                                    Icon="search"
+                                    Size="Radzen.ButtonSize.Medium"
+                                    Attributes="@(new Dictionary<string, object> { { "class", "icon" } })" />
+
+    </div>
+
+    <div class="col-md-3" />
+
+</RadzenMenu>
+
+@code
+{
+    public string Value { get; set; }
+
+    IEnumerable<string> values = new string[] { "en" };
+
+    void Change(IEnumerable<string> value, string name)
+    {
+        var str = string.Join(", ", value);
+        Console.WriteLine($"{name} value changed to {str}");
+    }
+
+    private async Task SearchAsync(ChangeEventArgs args)
+    {
+        Value = args.Value.ToString();
+        await viewModel.SearchEntity(Value);
+        StateHasChanged();
+    }
+
+    private async Task SetSearchDescription()
+    {
+        await Task.Delay(1);
+        await JSRuntime.InvokeVoidAsync("setSearchDescription", 
+                                        "ui-autocomplete-items", 
+                                        viewModel.SearchResultItemViewModels.Select(c => c.Description)
+                                                                            .ToArray());
+    }
+
+    private void ItemSelected(object v) =>
+        navigationManager.NavigateTo($"entity/{viewModel.SearchResultItemViewModels.First(c => c.Label == (v as string)).Id}");
+
+    private async Task ButtonClicked()
+    {
+        await viewModel.SearchEntity(Value);
+        navigationManager.NavigateTo($"entity/{viewModel.SearchResultItemViewModels.First(c => c.Label == Value).Id}");
+    }
+
+}

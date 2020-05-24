@@ -53,6 +53,27 @@ using Wiki.Blazor;
 #nullable disable
 #nullable restore
 #line 7 "C:\Users\barna\source\repos\Wiki\Wiki.Blazor\_Imports.razor"
+using Wiki.BLL.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "C:\Users\barna\source\repos\Wiki\Wiki.Blazor\_Imports.razor"
+using Radzen;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 9 "C:\Users\barna\source\repos\Wiki\Wiki.Blazor\_Imports.razor"
+using Radzen.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "C:\Users\barna\source\repos\Wiki\Wiki.Blazor\_Imports.razor"
 using Wiki.Blazor.Shared;
 
 #line default

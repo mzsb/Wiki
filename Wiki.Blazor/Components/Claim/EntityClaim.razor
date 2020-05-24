@@ -1,0 +1,24 @@
+﻿
+<RadzenPanel AllowCollapse="@(isNotEmpty)"
+             Attributes="@(new Dictionary<string, object> { { "class", "name-label" } })"
+             Collapsed="true">
+    <HeaderTemplate>
+        <RadzenLink Path=@($"entity/{viewModel.Id}")
+                    Text="@viewModel.Label"/>
+    </HeaderTemplate>
+    <ChildContent>
+        @if (isNotEmpty)
+        {
+            @viewModel.OtherLanguageLabelsStringList
+        }
+    </ChildContent>
+</RadzenPanel>
+
+@code {
+
+    [Parameter]
+    public EntityClaimDataItemViewModel viewModel { get; set; }
+
+    public bool isNotEmpty => viewModel.OtherLanguageLabels.Any();
+
+}

@@ -116,6 +116,7 @@ C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\refs\System.
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\refs\System.Xml.XPath.XDocument.dll
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Microsoft.Practices.ServiceLocation.dll
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Microsoft.Extensions.Logging.dll
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll
@@ -125,7 +126,7 @@ C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Microsoft.Ex
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Newtonsoft.Json.dll
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\System.Buffers.dll
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\System.Collections.Immutable.dll
-C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\System.ComponentModel.dll
+C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\System.Linq.dll
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\System.Memory.dll
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\System.Numerics.Vectors.dll
@@ -143,11 +144,12 @@ C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Uno.Xaml.dll
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Uno.dll
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Uno.UI.RemoteControl.dll
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Uno.Wasm.WebSockets.dll
+C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Wiki.BLL.dll
+C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Wiki.BLL.pdb
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\obj\Debug\netstandard2.0\Wiki.Wasm.csprojAssemblyReference.cache
+C:\Users\barna\source\repos\Wiki\Wiki.Wasm\obj\Debug\netstandard2.0\Wiki.Wasm.csproj.CoreCompileInputs.cache
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\obj\Debug\netstandard2.0\Wiki.Wasm.AssemblyInfoInputs.cache
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\obj\Debug\netstandard2.0\Wiki.Wasm.AssemblyInfo.cs
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\obj\Debug\netstandard2.0\Wiki.Wasm.csproj.CopyComplete
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\obj\Debug\netstandard2.0\Wiki.Wasm.dll
 C:\Users\barna\source\repos\Wiki\Wiki.Wasm\obj\Debug\netstandard2.0\Wiki.Wasm.pdb
-C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Wiki.BLL.dll
-C:\Users\barna\source\repos\Wiki\Wiki.Wasm\bin\Debug\netstandard2.0\Wiki.BLL.pdb

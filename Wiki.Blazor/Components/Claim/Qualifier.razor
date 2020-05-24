@@ -1,0 +1,44 @@
+﻿@using System.Collections.ObjectModel 
+
+<RadzenPanel AllowCollapse="true"
+             Collapsed="true">
+    <HeaderTemplate>
+        Qualifiers(@Qualifiers.Count)
+    </HeaderTemplate>
+    <ChildContent>
+        <RadzenGrid AllowFiltering="false"
+                    AllowSorting="false"
+                    AllowPaging="false"
+                    Data="Qualifiers">
+            <Columns>
+                <Radzen.Blazor.RadzenGridColumn TItem="QualifierItemViewModel"
+                                                Title="Statement">
+                    <Template Context="qualifier">
+
+                        @GetSpecificComponent(qualifier.Predicate)
+
+                    </Template>
+
+                </Radzen.Blazor.RadzenGridColumn>
+                <Radzen.Blazor.RadzenGridColumn TItem="QualifierItemViewModel"
+                                                Title="Objects">
+                    <Template Context="qualifier">
+                        @foreach (var claimData in qualifier.Objects)
+                        {
+                            @GetSpecificComponent(claimData)
+                        }
+                    </Template>
+
+                </Radzen.Blazor.RadzenGridColumn>
+            </Columns>
+        </RadzenGrid>
+    </ChildContent>
+</RadzenPanel>
+
+@code {
+    [Parameter]
+    public ObservableCollection<QualifierItemViewModel> Qualifiers { get; set; }
+
+    [Parameter]
+    public Func<ClaimDataItemViewModel,RenderFragment> GetSpecificComponent{ get; set; }
+}

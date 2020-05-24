@@ -1,0 +1,19 @@
+﻿
+<div style="display: inline-block">
+    @viewModel.Amount
+    @if (viewModel.UnitId is null)
+    {
+        @viewModel.Label
+    }
+    else
+    {
+        <RadzenLink Path=@($"entity/{viewModel.UnitId}")
+                    Text="@viewModel.Label" />
+    }
+
+</div>
+
+@code {
+    [Parameter]
+    public QuantityClaimDataItemViewModel viewModel { get; set; }
+}

@@ -1,0 +1,10 @@
+﻿@inject IJSRuntime JSRuntime;
+
+@viewModel.Label
+<RadzenImage Path=@viewModel.Source
+             Attributes="@(new Dictionary<string, object> { { "class", "image" } })"
+             Click='async () => await JSRuntime.InvokeAsync<object>("open", viewModel.Source)' />
+@code {
+    [Parameter]
+    public ImageClaimDataItemViewModel viewModel { get; set; }
+}

@@ -9,16 +9,54 @@
     ".NETStandard,Version=v2.0/": {
       "Wiki.BLL/1.0.0": {
         "dependencies": {
-          "NETStandard.Library": "2.0.3"
+          "Microsoft.Extensions.DependencyInjection": "3.0.3",
+          "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "12.0.3",
+          "System.ComponentModel.Annotations": "4.7.0"
         },
         "runtime": {
           "Wiki.BLL.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/3.0.3": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "3.0.3.0",
+            "fileVersion": "3.0.320.7202"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "3.0.3.0",
+            "fileVersion": "3.0.320.7202"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
+      "System.ComponentModel.Annotations/4.7.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.ComponentModel.Annotations.dll": {
+            "assemblyVersion": "4.2.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
         }
       }
     }
@@ -28,6 +66,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.Extensions.DependencyInjection/3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vu59TuHl3zoRI8vwK6gQL2EbWI2Qf/uBHFkSJXb4pgNvW7g8yK6Gn3v1bXDIKbMKEneTApriHfCVde0O314K+g==",
+      "path": "microsoft.extensions.dependencyinjection/3.0.3",
+      "hashPath": "microsoft.extensions.dependencyinjection.3.0.3.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Wb1ejBzHhCvp7VMr+M7vlHoXb68mJ89IHj4L+TzL8yA+X7Iz2UTAEkl8aIbhRloroYJw5zvlIPtKF5uA4wFlxw==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/3.0.3",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.3.0.3.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -42,6 +94,20 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
+      "path": "system.componentmodel.annotations/4.7.0",
+      "hashPath": "system.componentmodel.annotations.4.7.0.nupkg.sha512"
     }
   }
 }

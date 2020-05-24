@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "UAP,Version=v10.0.17763": {
+    "UAP,Version=v10.0.18362": {
       "CommonServiceLocator/1.3.0": {
         "type": "package",
         "compile": {
@@ -24,17 +24,25 @@
           "lib/netstandard1.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/1.1.0": {
+      "Microsoft.Extensions.DependencyInjection/3.0.3": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel": "4.3.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.3"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/1.1.1": {
@@ -331,6 +339,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.1": {
         "type": "package",
         "dependencies": {
@@ -429,16 +446,13 @@
           "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll": {}
         }
       },
-      "System.ComponentModel/4.3.0": {
+      "System.ComponentModel.Annotations/4.7.0": {
         "type": "package",
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netcore50/System.ComponentModel.dll": {}
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
         },
         "runtime": {
-          "lib/netcore50/System.ComponentModel.dll": {}
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.IO/4.3.0": {
@@ -620,6 +634,11 @@
       "Wiki.BLL/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "3.0.3",
+          "Newtonsoft.Json": "12.0.3",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
         "compile": {
           "bin/placeholder/Wiki.BLL.dll": {}
         },
@@ -628,7 +647,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.17763/win10-arm": {
+    "UAP,Version=v10.0.18362/win10-arm": {
       "CommonServiceLocator/1.3.0": {
         "type": "package",
         "compile": {
@@ -651,17 +670,25 @@
           "lib/netstandard1.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/1.1.0": {
+      "Microsoft.Extensions.DependencyInjection/3.0.3": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel": "4.3.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.3"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/1.1.1": {
@@ -957,6 +984,15 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.any.System.IO/4.3.0": {
@@ -1299,16 +1335,13 @@
           "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll": {}
         }
       },
-      "System.ComponentModel/4.3.0": {
+      "System.ComponentModel.Annotations/4.7.0": {
         "type": "package",
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netcore50/System.ComponentModel.dll": {}
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
         },
         "runtime": {
-          "lib/netcore50/System.ComponentModel.dll": {}
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.IO/4.3.0": {
@@ -1495,6 +1528,11 @@
       "Wiki.BLL/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "3.0.3",
+          "Newtonsoft.Json": "12.0.3",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
         "compile": {
           "bin/placeholder/Wiki.BLL.dll": {}
         },
@@ -1503,7 +1541,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.17763/win10-arm-aot": {
+    "UAP,Version=v10.0.18362/win10-arm-aot": {
       "CommonServiceLocator/1.3.0": {
         "type": "package",
         "compile": {
@@ -1526,17 +1564,25 @@
           "lib/netstandard1.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/1.1.0": {
+      "Microsoft.Extensions.DependencyInjection/3.0.3": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel": "4.3.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.3"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/1.1.1": {
@@ -1832,6 +1878,15 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.aot.System.Globalization/4.3.0": {
@@ -2205,16 +2260,13 @@
           "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll": {}
         }
       },
-      "System.ComponentModel/4.3.0": {
+      "System.ComponentModel.Annotations/4.7.0": {
         "type": "package",
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netcore50/System.ComponentModel.dll": {}
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
         },
         "runtime": {
-          "lib/netcore50/System.ComponentModel.dll": {}
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.Globalization/4.3.0": {
@@ -2445,6 +2497,11 @@
       "Wiki.BLL/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "3.0.3",
+          "Newtonsoft.Json": "12.0.3",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
         "compile": {
           "bin/placeholder/Wiki.BLL.dll": {}
         },
@@ -2453,7 +2510,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.17763/win10-arm64-aot": {
+    "UAP,Version=v10.0.18362/win10-arm64-aot": {
       "CommonServiceLocator/1.3.0": {
         "type": "package",
         "compile": {
@@ -2476,17 +2533,25 @@
           "lib/netstandard1.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/1.1.0": {
+      "Microsoft.Extensions.DependencyInjection/3.0.3": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel": "4.3.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.3"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/1.1.1": {
@@ -2782,6 +2847,15 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.aot.System.Globalization/4.3.0": {
@@ -3155,16 +3229,13 @@
           "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll": {}
         }
       },
-      "System.ComponentModel/4.3.0": {
+      "System.ComponentModel.Annotations/4.7.0": {
         "type": "package",
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netcore50/System.ComponentModel.dll": {}
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
         },
         "runtime": {
-          "lib/netcore50/System.ComponentModel.dll": {}
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.Globalization/4.3.0": {
@@ -3395,6 +3466,11 @@
       "Wiki.BLL/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "3.0.3",
+          "Newtonsoft.Json": "12.0.3",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
         "compile": {
           "bin/placeholder/Wiki.BLL.dll": {}
         },
@@ -3403,7 +3479,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.17763/win10-x64": {
+    "UAP,Version=v10.0.18362/win10-x64": {
       "CommonServiceLocator/1.3.0": {
         "type": "package",
         "compile": {
@@ -3426,17 +3502,25 @@
           "lib/netstandard1.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/1.1.0": {
+      "Microsoft.Extensions.DependencyInjection/3.0.3": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel": "4.3.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.3"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/1.1.1": {
@@ -3732,6 +3816,15 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.any.System.IO/4.3.0": {
@@ -4074,16 +4167,13 @@
           "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll": {}
         }
       },
-      "System.ComponentModel/4.3.0": {
+      "System.ComponentModel.Annotations/4.7.0": {
         "type": "package",
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netcore50/System.ComponentModel.dll": {}
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
         },
         "runtime": {
-          "lib/netcore50/System.ComponentModel.dll": {}
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.IO/4.3.0": {
@@ -4270,6 +4360,11 @@
       "Wiki.BLL/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "3.0.3",
+          "Newtonsoft.Json": "12.0.3",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
         "compile": {
           "bin/placeholder/Wiki.BLL.dll": {}
         },
@@ -4278,7 +4373,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.17763/win10-x64-aot": {
+    "UAP,Version=v10.0.18362/win10-x64-aot": {
       "CommonServiceLocator/1.3.0": {
         "type": "package",
         "compile": {
@@ -4301,17 +4396,25 @@
           "lib/netstandard1.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/1.1.0": {
+      "Microsoft.Extensions.DependencyInjection/3.0.3": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel": "4.3.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.3"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/1.1.1": {
@@ -4607,6 +4710,15 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.aot.System.Globalization/4.3.0": {
@@ -4980,16 +5092,13 @@
           "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll": {}
         }
       },
-      "System.ComponentModel/4.3.0": {
+      "System.ComponentModel.Annotations/4.7.0": {
         "type": "package",
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netcore50/System.ComponentModel.dll": {}
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
         },
         "runtime": {
-          "lib/netcore50/System.ComponentModel.dll": {}
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.Globalization/4.3.0": {
@@ -5220,6 +5329,11 @@
       "Wiki.BLL/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "3.0.3",
+          "Newtonsoft.Json": "12.0.3",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
         "compile": {
           "bin/placeholder/Wiki.BLL.dll": {}
         },
@@ -5228,7 +5342,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.17763/win10-x86": {
+    "UAP,Version=v10.0.18362/win10-x86": {
       "CommonServiceLocator/1.3.0": {
         "type": "package",
         "compile": {
@@ -5251,17 +5365,25 @@
           "lib/netstandard1.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/1.1.0": {
+      "Microsoft.Extensions.DependencyInjection/3.0.3": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel": "4.3.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.3"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/1.1.1": {
@@ -5557,6 +5679,15 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.any.System.IO/4.3.0": {
@@ -5899,16 +6030,13 @@
           "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll": {}
         }
       },
-      "System.ComponentModel/4.3.0": {
+      "System.ComponentModel.Annotations/4.7.0": {
         "type": "package",
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netcore50/System.ComponentModel.dll": {}
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
         },
         "runtime": {
-          "lib/netcore50/System.ComponentModel.dll": {}
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.IO/4.3.0": {
@@ -6095,6 +6223,11 @@
       "Wiki.BLL/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "3.0.3",
+          "Newtonsoft.Json": "12.0.3",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
         "compile": {
           "bin/placeholder/Wiki.BLL.dll": {}
         },
@@ -6103,7 +6236,7 @@
         }
       }
     },
-    "UAP,Version=v10.0.17763/win10-x86-aot": {
+    "UAP,Version=v10.0.18362/win10-x86-aot": {
       "CommonServiceLocator/1.3.0": {
         "type": "package",
         "compile": {
@@ -6126,17 +6259,25 @@
           "lib/netstandard1.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/1.1.0": {
+      "Microsoft.Extensions.DependencyInjection/3.0.3": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel": "4.3.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.3"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/1.1.1": {
@@ -6432,6 +6573,15 @@
         },
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.aot.System.Globalization/4.3.0": {
@@ -6805,16 +6955,13 @@
           "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll": {}
         }
       },
-      "System.ComponentModel/4.3.0": {
+      "System.ComponentModel.Annotations/4.7.0": {
         "type": "package",
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netcore50/System.ComponentModel.dll": {}
+          "ref/netcore50/System.ComponentModel.Annotations.dll": {}
         },
         "runtime": {
-          "lib/netcore50/System.ComponentModel.dll": {}
+          "lib/netcore50/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.Globalization/4.3.0": {
@@ -7045,6 +7192,11 @@
       "Wiki.BLL/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "3.0.3",
+          "Newtonsoft.Json": "12.0.3",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
         "compile": {
           "bin/placeholder/Wiki.BLL.dll": {}
         },
@@ -7083,16 +7235,35 @@
         "microsoft.extensions.configuration.abstractions.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/1.1.0": {
-      "sha512": "2luhjVaWZd8Wmr2KUJcLNAN+iZgezTyfamLG6Lo5FVYY1LYaS7UFOmNtApHGVIytWWtuXSk4ea0t2Vx0HgF5fg==",
+    "Microsoft.Extensions.DependencyInjection/3.0.3": {
+      "sha512": "Vu59TuHl3zoRI8vwK6gQL2EbWI2Qf/uBHFkSJXb4pgNvW7g8yK6Gn3v1bXDIKbMKEneTApriHfCVde0O314K+g==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/1.1.0",
+      "path": "microsoft.extensions.dependencyinjection/3.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/netstandard1.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.1.1.0.nupkg.sha512",
+        "Icon.png",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netcoreapp3.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netcoreapp3.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "microsoft.extensions.dependencyinjection.3.0.3.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.3": {
+      "sha512": "Wb1ejBzHhCvp7VMr+M7vlHoXb68mJ89IHj4L+TzL8yA+X7Iz2UTAEkl8aIbhRloroYJw5zvlIPtKF5uA4wFlxw==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/3.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.3.0.3.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec"
       ]
     },
@@ -7675,6 +7846,37 @@
         "lib/netstandard1.0/_._",
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "runtime.any.System.IO/4.3.0": {
@@ -11907,24 +12109,26 @@
         "system.collections.immutable.nuspec"
       ]
     },
-    "System.ComponentModel/4.3.0": {
-      "sha512": "VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
+    "System.ComponentModel.Annotations/4.7.0": {
+      "sha512": "0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
       "type": "package",
-      "path": "system.componentmodel/4.3.0",
+      "path": "system.componentmodel.annotations/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
-        "lib/netcore50/System.ComponentModel.dll",
-        "lib/netstandard1.3/System.ComponentModel.dll",
-        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/net461/System.ComponentModel.Annotations.dll",
+        "lib/netcore50/System.ComponentModel.Annotations.dll",
+        "lib/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.1/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.1/System.ComponentModel.Annotations.xml",
+        "lib/portable-net45+win8/_._",
         "lib/win8/_._",
-        "lib/wp80/_._",
-        "lib/wpa81/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
@@ -11932,38 +12136,66 @@
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net45/_._",
-        "ref/netcore50/System.ComponentModel.dll",
-        "ref/netcore50/System.ComponentModel.xml",
-        "ref/netcore50/de/System.ComponentModel.xml",
-        "ref/netcore50/es/System.ComponentModel.xml",
-        "ref/netcore50/fr/System.ComponentModel.xml",
-        "ref/netcore50/it/System.ComponentModel.xml",
-        "ref/netcore50/ja/System.ComponentModel.xml",
-        "ref/netcore50/ko/System.ComponentModel.xml",
-        "ref/netcore50/ru/System.ComponentModel.xml",
-        "ref/netcore50/zh-hans/System.ComponentModel.xml",
-        "ref/netcore50/zh-hant/System.ComponentModel.xml",
-        "ref/netstandard1.0/System.ComponentModel.dll",
-        "ref/netstandard1.0/System.ComponentModel.xml",
-        "ref/netstandard1.0/de/System.ComponentModel.xml",
-        "ref/netstandard1.0/es/System.ComponentModel.xml",
-        "ref/netstandard1.0/fr/System.ComponentModel.xml",
-        "ref/netstandard1.0/it/System.ComponentModel.xml",
-        "ref/netstandard1.0/ja/System.ComponentModel.xml",
-        "ref/netstandard1.0/ko/System.ComponentModel.xml",
-        "ref/netstandard1.0/ru/System.ComponentModel.xml",
-        "ref/netstandard1.0/zh-hans/System.ComponentModel.xml",
-        "ref/netstandard1.0/zh-hant/System.ComponentModel.xml",
-        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/net461/System.ComponentModel.Annotations.dll",
+        "ref/net461/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/System.ComponentModel.Annotations.dll",
+        "ref/netcore50/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/de/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/es/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/fr/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/it/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ja/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ko/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/ru/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netcore50/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.1/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.1/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.3/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.3/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "ref/netstandard1.4/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/de/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/es/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/fr/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/it/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ja/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ko/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/ru/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hans/System.ComponentModel.Annotations.xml",
+        "ref/netstandard1.4/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.1/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.1/System.ComponentModel.Annotations.xml",
+        "ref/portable-net45+win8/_._",
         "ref/win8/_._",
-        "ref/wp80/_._",
-        "ref/wpa81/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.componentmodel.4.3.0.nupkg.sha512",
-        "system.componentmodel.nuspec"
+        "system.componentmodel.annotations.4.7.0.nupkg.sha512",
+        "system.componentmodel.annotations.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Globalization/4.3.0": {
@@ -12840,7 +13072,8 @@
     }
   },
   "projectFileDependencyGroups": {
-    "UAP,Version=v10.0.17763": [
+    "UAP,Version=v10.0.18362": [
+      "Microsoft.Extensions.DependencyInjection >= 3.0.3",
       "Microsoft.Extensions.Logging.Console >= 1.1.1",
       "Microsoft.Extensions.Logging.Filter >= 1.1.1",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.2",
@@ -12873,14 +13106,14 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "uap10.0.17763"
+        "uap10.0.18362"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "uap10.0.17763": {
+        "uap10.0.18362": {
           "projectReferences": {
             "C:\\Users\\barna\\source\\repos\\Wiki\\Wiki.BLL\\Wiki.BLL.csproj": {
               "projectPath": "C:\\Users\\barna\\source\\repos\\Wiki\\Wiki.BLL\\Wiki.BLL.csproj"
@@ -12890,8 +13123,12 @@
       }
     },
     "frameworks": {
-      "uap10.0.17763": {
+      "uap10.0.18362": {
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[3.0.3, )"
+          },
           "Microsoft.Extensions.Logging.Console": {
             "target": "Package",
             "version": "[1.1.1, )"

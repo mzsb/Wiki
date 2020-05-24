@@ -47,14 +47,46 @@ namespace Wiki.Wasm
 				AddResolver(global::Uno.UI.Wasm.GlobalStaticResources.FindResource);
 				RegisterResources_App_6b2ad2ebe97a63eefdc60ade7811b968();
 				RegisterImplicitStylesResources_App_6b2ad2ebe97a63eefdc60ade7811b968();
-				RegisterResources_MainPage_fd4703a8aa2cd0d7d60476c56f7904a8();
-				RegisterImplicitStylesResources_MainPage_fd4703a8aa2cd0d7d60476c56f7904a8();
+				RegisterResources_AppColor_df2a2ccb5d3af4930411126fb192b775();
+				RegisterImplicitStylesResources_AppColor_df2a2ccb5d3af4930411126fb192b775();
+				RegisterResources_ClaimObject_7f81f1628f6d6cc6747507ee800b7b3e();
+				RegisterImplicitStylesResources_ClaimObject_7f81f1628f6d6cc6747507ee800b7b3e();
+				RegisterResources_CommonTemplates_4fbc5f1b1a8ee1603fed864b063b78f4();
+				RegisterImplicitStylesResources_CommonTemplates_4fbc5f1b1a8ee1603fed864b063b78f4();
+				RegisterResources_EntityPage_d73062560ecb07922d2da17b300cd2ea();
+				RegisterImplicitStylesResources_EntityPage_d73062560ecb07922d2da17b300cd2ea();
+				RegisterResources_Fieldset_34c0111d810e7a1e8698572304d8950a();
+				RegisterImplicitStylesResources_Fieldset_34c0111d810e7a1e8698572304d8950a();
+				RegisterResources_NavMenu_5369a1cb4b7a298e659af540716b960c();
+				RegisterImplicitStylesResources_NavMenu_5369a1cb4b7a298e659af540716b960c();
+				RegisterResources_Panel_6e8883e303af028e0b5c00b02d0aafb7();
+				RegisterImplicitStylesResources_Panel_6e8883e303af028e0b5c00b02d0aafb7();
+				RegisterResources_Qualifiers_bcdc8ce318522eeb938734391e7beec6();
+				RegisterImplicitStylesResources_Qualifiers_bcdc8ce318522eeb938734391e7beec6();
+				RegisterResources_References_0910519e09c523bbb0fe53cc5e16d51d();
+				RegisterImplicitStylesResources_References_0910519e09c523bbb0fe53cc5e16d51d();
 			}
 		}
 		static partial void RegisterResources_App_6b2ad2ebe97a63eefdc60ade7811b968();
 		static partial void RegisterImplicitStylesResources_App_6b2ad2ebe97a63eefdc60ade7811b968();
-		static partial void RegisterResources_MainPage_fd4703a8aa2cd0d7d60476c56f7904a8();
-		static partial void RegisterImplicitStylesResources_MainPage_fd4703a8aa2cd0d7d60476c56f7904a8();
+		static partial void RegisterResources_AppColor_df2a2ccb5d3af4930411126fb192b775();
+		static partial void RegisterImplicitStylesResources_AppColor_df2a2ccb5d3af4930411126fb192b775();
+		static partial void RegisterResources_ClaimObject_7f81f1628f6d6cc6747507ee800b7b3e();
+		static partial void RegisterImplicitStylesResources_ClaimObject_7f81f1628f6d6cc6747507ee800b7b3e();
+		static partial void RegisterResources_CommonTemplates_4fbc5f1b1a8ee1603fed864b063b78f4();
+		static partial void RegisterImplicitStylesResources_CommonTemplates_4fbc5f1b1a8ee1603fed864b063b78f4();
+		static partial void RegisterResources_EntityPage_d73062560ecb07922d2da17b300cd2ea();
+		static partial void RegisterImplicitStylesResources_EntityPage_d73062560ecb07922d2da17b300cd2ea();
+		static partial void RegisterResources_Fieldset_34c0111d810e7a1e8698572304d8950a();
+		static partial void RegisterImplicitStylesResources_Fieldset_34c0111d810e7a1e8698572304d8950a();
+		static partial void RegisterResources_NavMenu_5369a1cb4b7a298e659af540716b960c();
+		static partial void RegisterImplicitStylesResources_NavMenu_5369a1cb4b7a298e659af540716b960c();
+		static partial void RegisterResources_Panel_6e8883e303af028e0b5c00b02d0aafb7();
+		static partial void RegisterImplicitStylesResources_Panel_6e8883e303af028e0b5c00b02d0aafb7();
+		static partial void RegisterResources_Qualifiers_bcdc8ce318522eeb938734391e7beec6();
+		static partial void RegisterImplicitStylesResources_Qualifiers_bcdc8ce318522eeb938734391e7beec6();
+		static partial void RegisterResources_References_0910519e09c523bbb0fe53cc5e16d51d();
+		static partial void RegisterImplicitStylesResources_References_0910519e09c523bbb0fe53cc5e16d51d();
 		
 		/// <summary>
 		/// Finds a resource instance in the Global Static Resources

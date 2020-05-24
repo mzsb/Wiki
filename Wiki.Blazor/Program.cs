@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Text;
 using Microsoft.AspNetCore.Blazor.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using Wiki.BLL.Helpers;
 
 namespace Wiki.Blazor
 {
@@ -13,6 +14,7 @@ namespace Wiki.Blazor
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("app");
+            builder.Services.Configure();
 
             await builder.Build().RunAsync();
         }

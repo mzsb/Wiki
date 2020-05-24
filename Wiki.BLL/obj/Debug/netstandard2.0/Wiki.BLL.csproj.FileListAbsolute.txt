@@ -1,7 +1,9 @@
 C:\Users\barna\source\repos\Wiki\Wiki.BLL\bin\Debug\netstandard2.0\Wiki.BLL.deps.json
 C:\Users\barna\source\repos\Wiki\Wiki.BLL\bin\Debug\netstandard2.0\Wiki.BLL.dll
 C:\Users\barna\source\repos\Wiki\Wiki.BLL\bin\Debug\netstandard2.0\Wiki.BLL.pdb
+C:\Users\barna\source\repos\Wiki\Wiki.BLL\obj\Debug\netstandard2.0\Wiki.BLL.csproj.CoreCompileInputs.cache
 C:\Users\barna\source\repos\Wiki\Wiki.BLL\obj\Debug\netstandard2.0\Wiki.BLL.AssemblyInfoInputs.cache
 C:\Users\barna\source\repos\Wiki\Wiki.BLL\obj\Debug\netstandard2.0\Wiki.BLL.AssemblyInfo.cs
 C:\Users\barna\source\repos\Wiki\Wiki.BLL\obj\Debug\netstandard2.0\Wiki.BLL.dll
 C:\Users\barna\source\repos\Wiki\Wiki.BLL\obj\Debug\netstandard2.0\Wiki.BLL.pdb
+C:\Users\barna\source\repos\Wiki\Wiki.BLL\obj\Debug\netstandard2.0\Wiki.BLL.csprojAssemblyReference.cache

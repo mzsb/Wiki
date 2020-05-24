@@ -18,26 +18,81 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\CollectionIsEmptyToBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\NullToBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\StringIsEmptyToBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StyleSelectors\ClaimDataItemContainerStyleSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TemplateSelectors\ClaimDataTemplateSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\EntityPage.xaml.cs">
+      <DependentUpon>$fileinputname$.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserControls\ClaimObject.xaml.cs">
+      <DependentUpon>ClaimObject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserControls\Fieldset.xaml.cs">
+      <DependentUpon>Fieldset.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserControls\NavMenu.xaml.cs">
+      <DependentUpon>NavMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserControls\Panel.xaml.cs">
+      <DependentUpon>Panel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserControls\Qualifiers.xaml.cs">
+      <DependentUpon>Qualifiers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UserControls\References.xaml.cs">
+      <DependentUpon>References.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)MainPage.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)Colors\AppColor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)DataTemplates\CommonTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Pages\EntityPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UserControls\ClaimObject.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UserControls\Fieldset.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UserControls\NavMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UserControls\Panel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UserControls\Qualifiers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UserControls\References.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-	<ItemGroup>
-		<Content Include="$(MSBuildThisFileDirectory)Assets\LockScreenLogo.scale-200.png" />
-		<Content Include="$(MSBuildThisFileDirectory)Assets\SplashScreen.scale-200.png" />
-		<Content Include="$(MSBuildThisFileDirectory)Assets\Square150x150Logo.scale-200.png" />
-		<Content Include="$(MSBuildThisFileDirectory)Assets\Square44x44Logo.scale-200.png" />
-		<Content Include="$(MSBuildThisFileDirectory)Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-		<Content Include="$(MSBuildThisFileDirectory)Assets\StoreLogo.png" />
-		<Content Include="$(MSBuildThisFileDirectory)Assets\Wide310x150Logo.scale-200.png" />
-	</ItemGroup>
-	<ItemGroup>
-		<PRIResource Include="$(MSBuildThisFileDirectory)Strings\en\Resources.resw" />
-	</ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\SplashScreen.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\StoreLogo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en\Resources.resw" />
+  </ItemGroup>
 </Project>

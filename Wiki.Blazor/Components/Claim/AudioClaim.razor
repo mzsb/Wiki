@@ -1,0 +1,18 @@
+﻿
+@viewModel.Label
+<audio controls>
+
+    <source src="@viewModel.Source"
+            type="audio/ogg">
+
+    <source src="@viewModel.Source"
+            type="audio/mpeg">
+
+    Your browser does not support the audio element.
+
+</audio>
+
+@code {
+    [Parameter]
+    public AudioClaimDataItemViewModel viewModel { get; set; }
+}

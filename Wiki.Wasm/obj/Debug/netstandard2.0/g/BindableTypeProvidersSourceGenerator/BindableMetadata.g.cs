@@ -23870,7 +23870,32 @@ namespace Wiki.Wasm
 	}
 
 	/// <summary>
-	/// Builder for Wiki.MainPage
+	/// Builder for Wiki.BLL.ViewModels.ViewModelBase
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_551
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(0, typeof(global::Wiki.BLL.ViewModels.ViewModelBase));
+			return bindableType;
+		}
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.SearchComponentViewModel
 	/// </summary>
 	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
@@ -23889,15 +23914,805 @@ namespace Wiki.Wasm
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
 		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
 		{
-			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(141, typeof(global::Wiki.MainPage));
-			MetadataBuilder_232.Build(bindableType); // global::Windows.UI.Xaml.Controls.Page
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(1, typeof(global::Wiki.BLL.ViewModels.SearchComponentViewModel));
+			MetadataBuilder_551.Build(bindableType); // global::Wiki.BLL.ViewModels.ViewModelBase
+			bindableType.AddProperty("SearchResultItemViewModels", typeof(global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.SearchResultItemViewModel>), GetSearchResultItemViewModels, SetSearchResultItemViewModels);
+			return bindableType;
+		}
+		private static object GetSearchResultItemViewModels(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.SearchComponentViewModel)instance).SearchResultItemViewModels;
+		private static void SetSearchResultItemViewModels(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.SearchComponentViewModel)instance).SearchResultItemViewModels = (global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.SearchResultItemViewModel>)value;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.ClaimItemViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_552
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(4, typeof(global::Wiki.BLL.ViewModels.ClaimItemViewModel));
+			MetadataBuilder_551.Build(bindableType); // global::Wiki.BLL.ViewModels.ViewModelBase
+			bindableType.AddProperty("Predicate", typeof(global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel), GetPredicate, SetPredicate);
+			bindableType.AddProperty("Objects", typeof(global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.ClaimDataItemViewModel>), GetObjects, SetObjects);
+			bindableType.AddProperty("PredicateSortProperty", typeof(string), GetPredicateSortProperty);
+			bindableType.AddProperty("ObjectsSortProperty", typeof(string), GetObjectsSortProperty);
+			return bindableType;
+		}
+		private static object GetPredicate(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ClaimItemViewModel)instance).Predicate;
+		private static void SetPredicate(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ClaimItemViewModel)instance).Predicate = (global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel)value;
+		private static object GetObjects(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ClaimItemViewModel)instance).Objects;
+		private static void SetObjects(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ClaimItemViewModel)instance).Objects = (global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.ClaimDataItemViewModel>)value;
+		private static object GetPredicateSortProperty(object instance, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ClaimItemViewModel)instance).PredicateSortProperty;
+		private static object GetObjectsSortProperty(object instance, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ClaimItemViewModel)instance).ObjectsSortProperty;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.ClaimDataItemViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_554
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(4, typeof(global::Wiki.BLL.ViewModels.ClaimDataItemViewModel));
+			MetadataBuilder_551.Build(bindableType); // global::Wiki.BLL.ViewModels.ViewModelBase
+			bindableType.AddProperty("Label", typeof(string), GetLabel, SetLabel);
+			bindableType.AddProperty("Rank", typeof(string), GetRank, SetRank);
+			bindableType.AddProperty("Qualifiers", typeof(global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.QualifierItemViewModel>), GetQualifiers, SetQualifiers);
+			bindableType.AddProperty("References", typeof(global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.ReferenceItemViewModel>), GetReferences, SetReferences);
+			return bindableType;
+		}
+		private static object GetLabel(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ClaimDataItemViewModel)instance).Label;
+		private static void SetLabel(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ClaimDataItemViewModel)instance).Label = (string)value;
+		private static object GetRank(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ClaimDataItemViewModel)instance).Rank;
+		private static void SetRank(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ClaimDataItemViewModel)instance).Rank = (string)value;
+		private static object GetQualifiers(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ClaimDataItemViewModel)instance).Qualifiers;
+		private static void SetQualifiers(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ClaimDataItemViewModel)instance).Qualifiers = (global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.QualifierItemViewModel>)value;
+		private static object GetReferences(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ClaimDataItemViewModel)instance).References;
+		private static void SetReferences(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ClaimDataItemViewModel)instance).References = (global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.ReferenceItemViewModel>)value;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.AudioClaimDataItemViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_553
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(5, typeof(global::Wiki.BLL.ViewModels.AudioClaimDataItemViewModel));
+			MetadataBuilder_554.Build(bindableType); // global::Wiki.BLL.ViewModels.ClaimDataItemViewModel
+			bindableType.AddProperty("Source", typeof(string), GetSource, SetSource);
+			return bindableType;
+		}
+		private static object GetSource(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.AudioClaimDataItemViewModel)instance).Source;
+		private static void SetSource(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.AudioClaimDataItemViewModel)instance).Source = (string)value;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.EntityClaimDataItemViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_555
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(8, typeof(global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel));
+			MetadataBuilder_554.Build(bindableType); // global::Wiki.BLL.ViewModels.ClaimDataItemViewModel
+			if(parent == null)
+			{
+				bindableType.AddActivator(CreateInstance);
+			}
+			bindableType.AddProperty("Id", typeof(string), GetId, SetId);
+			bindableType.AddProperty("OtherLanguageLabels", typeof(global::System.Collections.ObjectModel.ObservableCollection<string>), GetOtherLanguageLabels, SetOtherLanguageLabels);
+			bindableType.AddProperty("OtherLanguageLabelsStringList", typeof(string), GetOtherLanguageLabelsStringList);
+			bindableType.AddProperty("Command", typeof(global::Wiki.BLL.Commands.DelegateCommand), GetCommand, SetCommand);
+			return bindableType;
+		}
+		private static object CreateInstance() => new global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel();
+		private static object GetId(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel)instance).Id;
+		private static void SetId(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel)instance).Id = (string)value;
+		private static object GetOtherLanguageLabels(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel)instance).OtherLanguageLabels;
+		private static void SetOtherLanguageLabels(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel)instance).OtherLanguageLabels = (global::System.Collections.ObjectModel.ObservableCollection<string>)value;
+		private static object GetOtherLanguageLabelsStringList(object instance, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel)instance).OtherLanguageLabelsStringList;
+		private static object GetCommand(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel)instance).Command;
+		private static void SetCommand(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel)instance).Command = (global::Wiki.BLL.Commands.DelegateCommand)value;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.ImageClaimDataItemViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_556
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(6, typeof(global::Wiki.BLL.ViewModels.ImageClaimDataItemViewModel));
+			MetadataBuilder_554.Build(bindableType); // global::Wiki.BLL.ViewModels.ClaimDataItemViewModel
+			bindableType.AddProperty("Source", typeof(string), GetSource, SetSource);
+			bindableType.AddProperty("Command", typeof(global::Wiki.BLL.Commands.DelegateCommand), GetCommand, SetCommand);
+			return bindableType;
+		}
+		private static object GetSource(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ImageClaimDataItemViewModel)instance).Source;
+		private static void SetSource(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ImageClaimDataItemViewModel)instance).Source = (string)value;
+		private static object GetCommand(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ImageClaimDataItemViewModel)instance).Command;
+		private static void SetCommand(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ImageClaimDataItemViewModel)instance).Command = (global::Wiki.BLL.Commands.DelegateCommand)value;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.QualifierItemViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_557
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(2, typeof(global::Wiki.BLL.ViewModels.QualifierItemViewModel));
+			MetadataBuilder_551.Build(bindableType); // global::Wiki.BLL.ViewModels.ViewModelBase
+			bindableType.AddProperty("Predicate", typeof(global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel), GetPredicate, SetPredicate);
+			bindableType.AddProperty("Objects", typeof(global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.ClaimDataItemViewModel>), GetObjects, SetObjects);
+			return bindableType;
+		}
+		private static object GetPredicate(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.QualifierItemViewModel)instance).Predicate;
+		private static void SetPredicate(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.QualifierItemViewModel)instance).Predicate = (global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel)value;
+		private static object GetObjects(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.QualifierItemViewModel)instance).Objects;
+		private static void SetObjects(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.QualifierItemViewModel)instance).Objects = (global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.ClaimDataItemViewModel>)value;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.QuantityClaimDataItemViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_558
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(7, typeof(global::Wiki.BLL.ViewModels.QuantityClaimDataItemViewModel));
+			MetadataBuilder_554.Build(bindableType); // global::Wiki.BLL.ViewModels.ClaimDataItemViewModel
+			bindableType.AddProperty("UnitId", typeof(string), GetUnitId, SetUnitId);
+			bindableType.AddProperty("Amount", typeof(string), GetAmount, SetAmount);
+			bindableType.AddProperty("Command", typeof(global::Wiki.BLL.Commands.DelegateCommand), GetCommand, SetCommand);
+			return bindableType;
+		}
+		private static object GetUnitId(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.QuantityClaimDataItemViewModel)instance).UnitId;
+		private static void SetUnitId(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.QuantityClaimDataItemViewModel)instance).UnitId = (string)value;
+		private static object GetAmount(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.QuantityClaimDataItemViewModel)instance).Amount;
+		private static void SetAmount(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.QuantityClaimDataItemViewModel)instance).Amount = (string)value;
+		private static object GetCommand(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.QuantityClaimDataItemViewModel)instance).Command;
+		private static void SetCommand(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.QuantityClaimDataItemViewModel)instance).Command = (global::Wiki.BLL.Commands.DelegateCommand)value;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.ReferenceItemViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_559
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(2, typeof(global::Wiki.BLL.ViewModels.ReferenceItemViewModel));
+			MetadataBuilder_551.Build(bindableType); // global::Wiki.BLL.ViewModels.ViewModelBase
+			bindableType.AddProperty("Predicate", typeof(global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel), GetPredicate, SetPredicate);
+			bindableType.AddProperty("Objects", typeof(global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.ClaimDataItemViewModel>), GetObjects, SetObjects);
+			return bindableType;
+		}
+		private static object GetPredicate(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ReferenceItemViewModel)instance).Predicate;
+		private static void SetPredicate(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ReferenceItemViewModel)instance).Predicate = (global::Wiki.BLL.ViewModels.EntityClaimDataItemViewModel)value;
+		private static object GetObjects(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ReferenceItemViewModel)instance).Objects;
+		private static void SetObjects(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.ReferenceItemViewModel)instance).Objects = (global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.ClaimDataItemViewModel>)value;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.StringClaimDataItemViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_560
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(4, typeof(global::Wiki.BLL.ViewModels.StringClaimDataItemViewModel));
+			MetadataBuilder_554.Build(bindableType); // global::Wiki.BLL.ViewModels.ClaimDataItemViewModel
+			return bindableType;
+		}
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.UnknownClaimDataItemViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_561
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(4, typeof(global::Wiki.BLL.ViewModels.UnknownClaimDataItemViewModel));
+			MetadataBuilder_554.Build(bindableType); // global::Wiki.BLL.ViewModels.ClaimDataItemViewModel
 			if(parent == null)
 			{
 				bindableType.AddActivator(CreateInstance);
 			}
 			return bindableType;
 		}
-		private static object CreateInstance() => new global::Wiki.MainPage();
+		private static object CreateInstance() => new global::Wiki.BLL.ViewModels.UnknownClaimDataItemViewModel();
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.VideoClaimDataItemViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_562
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(5, typeof(global::Wiki.BLL.ViewModels.VideoClaimDataItemViewModel));
+			MetadataBuilder_554.Build(bindableType); // global::Wiki.BLL.ViewModels.ClaimDataItemViewModel
+			bindableType.AddProperty("Source", typeof(string), GetSource, SetSource);
+			return bindableType;
+		}
+		private static object GetSource(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.VideoClaimDataItemViewModel)instance).Source;
+		private static void SetSource(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.VideoClaimDataItemViewModel)instance).Source = (string)value;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.CommonDataItemViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_563
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(5, typeof(global::Wiki.BLL.ViewModels.CommonDataItemViewModel));
+			MetadataBuilder_551.Build(bindableType); // global::Wiki.BLL.ViewModels.ViewModelBase
+			if(parent == null)
+			{
+				bindableType.AddActivator(CreateInstance);
+			}
+			bindableType.AddProperty("Label", typeof(string), GetLabel, SetLabel);
+			bindableType.AddProperty("Description", typeof(string), GetDescription, SetDescription);
+			bindableType.AddProperty("Aliases", typeof(global::System.Collections.ObjectModel.ObservableCollection<string>), GetAliases, SetAliases);
+			bindableType.AddProperty("AliasesStringList", typeof(string), GetAliasesStringList);
+			bindableType.AddProperty("SiteLink", typeof(string), GetSiteLink, SetSiteLink);
+			return bindableType;
+		}
+		private static object CreateInstance() => new global::Wiki.BLL.ViewModels.CommonDataItemViewModel();
+		private static object GetLabel(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.CommonDataItemViewModel)instance).Label;
+		private static void SetLabel(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.CommonDataItemViewModel)instance).Label = (string)value;
+		private static object GetDescription(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.CommonDataItemViewModel)instance).Description;
+		private static void SetDescription(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.CommonDataItemViewModel)instance).Description = (string)value;
+		private static object GetAliases(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.CommonDataItemViewModel)instance).Aliases;
+		private static void SetAliases(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.CommonDataItemViewModel)instance).Aliases = (global::System.Collections.ObjectModel.ObservableCollection<string>)value;
+		private static object GetAliasesStringList(object instance, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.CommonDataItemViewModel)instance).AliasesStringList;
+		private static object GetSiteLink(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.CommonDataItemViewModel)instance).SiteLink;
+		private static void SetSiteLink(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.CommonDataItemViewModel)instance).SiteLink = (string)value;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.EntityItemViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_564
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(3, typeof(global::Wiki.BLL.ViewModels.EntityItemViewModel));
+			MetadataBuilder_551.Build(bindableType); // global::Wiki.BLL.ViewModels.ViewModelBase
+			if(parent == null)
+			{
+				bindableType.AddActivator(CreateInstance);
+			}
+			bindableType.AddProperty("Label", typeof(string), GetLabel, SetLabel);
+			bindableType.AddProperty("CommonDatas", typeof(global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.CommonDataItemViewModel>), GetCommonDatas, SetCommonDatas);
+			bindableType.AddProperty("Claims", typeof(global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.ClaimItemViewModel>), GetClaims, SetClaims);
+			return bindableType;
+		}
+		private static object CreateInstance() => new global::Wiki.BLL.ViewModels.EntityItemViewModel();
+		private static object GetLabel(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityItemViewModel)instance).Label;
+		private static void SetLabel(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityItemViewModel)instance).Label = (string)value;
+		private static object GetCommonDatas(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityItemViewModel)instance).CommonDatas;
+		private static void SetCommonDatas(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityItemViewModel)instance).CommonDatas = (global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.CommonDataItemViewModel>)value;
+		private static object GetClaims(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityItemViewModel)instance).Claims;
+		private static void SetClaims(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityItemViewModel)instance).Claims = (global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.ClaimItemViewModel>)value;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.SearchResultItemViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_565
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(3, typeof(global::Wiki.BLL.ViewModels.SearchResultItemViewModel));
+			MetadataBuilder_551.Build(bindableType); // global::Wiki.BLL.ViewModels.ViewModelBase
+			bindableType.AddProperty("Label", typeof(string), GetLabel, SetLabel);
+			bindableType.AddProperty("Description", typeof(string), GetDescription, SetDescription);
+			bindableType.AddProperty("Id", typeof(string), GetId, SetId);
+			return bindableType;
+		}
+		private static object GetLabel(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.SearchResultItemViewModel)instance).Label;
+		private static void SetLabel(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.SearchResultItemViewModel)instance).Label = (string)value;
+		private static object GetDescription(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.SearchResultItemViewModel)instance).Description;
+		private static void SetDescription(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.SearchResultItemViewModel)instance).Description = (string)value;
+		private static object GetId(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.SearchResultItemViewModel)instance).Id;
+		private static void SetId(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.SearchResultItemViewModel)instance).Id = (string)value;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.BLL.ViewModels.EntityPageViewModel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_566
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(3, typeof(global::Wiki.BLL.ViewModels.EntityPageViewModel));
+			MetadataBuilder_551.Build(bindableType); // global::Wiki.BLL.ViewModels.ViewModelBase
+			bindableType.AddProperty("EntityItemViewModel", typeof(global::Wiki.BLL.ViewModels.EntityItemViewModel), GetEntityItemViewModel, SetEntityItemViewModel);
+			bindableType.AddProperty("Languages", typeof(global::System.Collections.ObjectModel.ObservableCollection<string>), GetLanguages, SetLanguages);
+			bindableType.AddProperty("OpenInBrowser", typeof(global::System.Action<string>), GetOpenInBrowser, SetOpenInBrowser);
+			return bindableType;
+		}
+		private static object GetEntityItemViewModel(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityPageViewModel)instance).EntityItemViewModel;
+		private static void SetEntityItemViewModel(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityPageViewModel)instance).EntityItemViewModel = (global::Wiki.BLL.ViewModels.EntityItemViewModel)value;
+		private static object GetLanguages(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityPageViewModel)instance).Languages;
+		private static void SetLanguages(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityPageViewModel)instance).Languages = (global::System.Collections.ObjectModel.ObservableCollection<string>)value;
+		private static object GetOpenInBrowser(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityPageViewModel)instance).OpenInBrowser;
+		private static void SetOpenInBrowser(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.BLL.ViewModels.EntityPageViewModel)instance).OpenInBrowser = (global::System.Action<string>)value;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.Shared.Pages.EntityPage
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_567
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(142, typeof(global::Wiki.Shared.Pages.EntityPage));
+			MetadataBuilder_232.Build(bindableType); // global::Windows.UI.Xaml.Controls.Page
+			if(parent == null)
+			{
+				bindableType.AddActivator(CreateInstance);
+			}
+			bindableType.AddProperty("LoadEntity", typeof(global::System.Func<string, System.Threading.Tasks.Task>), GetLoadEntity);
+			return bindableType;
+		}
+		private static object CreateInstance() => new global::Wiki.Shared.Pages.EntityPage();
+		private static object GetLoadEntity(object instance, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.Shared.Pages.EntityPage)instance).LoadEntity;
+	}
+
+	/// <summary>
+	/// Builder for Wiki.Shared.UserControls.ClaimObject
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_568
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(139, typeof(global::Wiki.Shared.UserControls.ClaimObject));
+			MetadataBuilder_233.Build(bindableType); // global::Windows.UI.Xaml.Controls.UserControl
+			if(parent == null)
+			{
+				bindableType.AddActivator(CreateInstance);
+			}
+			bindableType.AddProperty("ClaimData", typeof(global::Wiki.BLL.ViewModels.ClaimDataItemViewModel),  GetClaimData, SetClaimData);
+			bindableType.AddProperty("InnerContent", typeof(object),  GetInnerContent, SetInnerContent);
+			return bindableType;
+		}
+		private static object CreateInstance() => new global::Wiki.Shared.UserControls.ClaimObject();
+		private static object GetClaimData(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.GetValue(instance, global::Wiki.Shared.UserControls.ClaimObject.ClaimDataProperty, precedence);
+		private static void SetClaimData(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.SetValue(instance, global::Wiki.Shared.UserControls.ClaimObject.ClaimDataProperty, value, precedence);
+		private static object GetInnerContent(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.GetValue(instance, global::Wiki.Shared.UserControls.ClaimObject.InnerContentProperty, precedence);
+		private static void SetInnerContent(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.SetValue(instance, global::Wiki.Shared.UserControls.ClaimObject.InnerContentProperty, value, precedence);
+	}
+
+	/// <summary>
+	/// Builder for Wiki.Shared.UserControls.Fieldset
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_569
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(142, typeof(global::Wiki.Shared.UserControls.Fieldset));
+			MetadataBuilder_233.Build(bindableType); // global::Windows.UI.Xaml.Controls.UserControl
+			if(parent == null)
+			{
+				bindableType.AddActivator(CreateInstance);
+			}
+			bindableType.AddProperty("IsOpen", typeof(bool), GetIsOpen, SetIsOpen);
+			bindableType.AddProperty("WindowWidth", typeof(double), GetWindowWidth);
+			bindableType.AddProperty("InnerContent", typeof(object),  GetInnerContent, SetInnerContent);
+			bindableType.AddProperty("Header", typeof(object),  GetHeader, SetHeader);
+			bindableType.AddProperty("IsOpenable", typeof(bool),  GetIsOpenable, SetIsOpenable);
+			return bindableType;
+		}
+		private static object CreateInstance() => new global::Wiki.Shared.UserControls.Fieldset();
+		private static object GetIsOpen(object instance, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.Shared.UserControls.Fieldset)instance).IsOpen;
+		private static void SetIsOpen(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence)
+		{
+			if(value != null)
+			{
+				((global::Wiki.Shared.UserControls.Fieldset)instance).IsOpen = (bool)value;
+			}
+		}
+		private static object GetWindowWidth(object instance, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.Shared.UserControls.Fieldset)instance).WindowWidth;
+		private static object GetInnerContent(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.GetValue(instance, global::Wiki.Shared.UserControls.Fieldset.InnerContentProperty, precedence);
+		private static void SetInnerContent(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.SetValue(instance, global::Wiki.Shared.UserControls.Fieldset.InnerContentProperty, value, precedence);
+		private static object GetHeader(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.GetValue(instance, global::Wiki.Shared.UserControls.Fieldset.HeaderProperty, precedence);
+		private static void SetHeader(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.SetValue(instance, global::Wiki.Shared.UserControls.Fieldset.HeaderProperty, value, precedence);
+		private static object GetIsOpenable(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.GetValue(instance, global::Wiki.Shared.UserControls.Fieldset.IsOpenableProperty, precedence);
+		private static void SetIsOpenable(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.SetValue(instance, global::Wiki.Shared.UserControls.Fieldset.IsOpenableProperty, value, precedence);
+	}
+
+	/// <summary>
+	/// Builder for Wiki.Shared.UserControls.NavMenu
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_570
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(139, typeof(global::Wiki.Shared.UserControls.NavMenu));
+			MetadataBuilder_233.Build(bindableType); // global::Windows.UI.Xaml.Controls.UserControl
+			if(parent == null)
+			{
+				bindableType.AddActivator(CreateInstance);
+			}
+			bindableType.AddProperty("InnerContent", typeof(object),  GetInnerContent, SetInnerContent);
+			bindableType.AddProperty("LoadEntity", typeof(global::System.Func<string, System.Threading.Tasks.Task>),  GetLoadEntity, SetLoadEntity);
+			return bindableType;
+		}
+		private static object CreateInstance() => new global::Wiki.Shared.UserControls.NavMenu();
+		private static object GetInnerContent(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.GetValue(instance, global::Wiki.Shared.UserControls.NavMenu.InnerContentProperty, precedence);
+		private static void SetInnerContent(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.SetValue(instance, global::Wiki.Shared.UserControls.NavMenu.InnerContentProperty, value, precedence);
+		private static object GetLoadEntity(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.GetValue(instance, global::Wiki.Shared.UserControls.NavMenu.LoadEntityProperty, precedence);
+		private static void SetLoadEntity(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.SetValue(instance, global::Wiki.Shared.UserControls.NavMenu.LoadEntityProperty, value, precedence);
+	}
+
+	/// <summary>
+	/// Builder for Wiki.Shared.UserControls.Panel
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_571
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(141, typeof(global::Wiki.Shared.UserControls.Panel));
+			MetadataBuilder_233.Build(bindableType); // global::Windows.UI.Xaml.Controls.UserControl
+			if(parent == null)
+			{
+				bindableType.AddActivator(CreateInstance);
+			}
+			bindableType.AddProperty("IsOpen", typeof(bool), GetIsOpen, SetIsOpen);
+			bindableType.AddProperty("InnerContent", typeof(object),  GetInnerContent, SetInnerContent);
+			bindableType.AddProperty("Header", typeof(object),  GetHeader, SetHeader);
+			bindableType.AddProperty("IsOpenable", typeof(bool),  GetIsOpenable, SetIsOpenable);
+			return bindableType;
+		}
+		private static object CreateInstance() => new global::Wiki.Shared.UserControls.Panel();
+		private static object GetIsOpen(object instance, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => ((global::Wiki.Shared.UserControls.Panel)instance).IsOpen;
+		private static void SetIsOpen(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence)
+		{
+			if(value != null)
+			{
+				((global::Wiki.Shared.UserControls.Panel)instance).IsOpen = (bool)value;
+			}
+		}
+		private static object GetInnerContent(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.GetValue(instance, global::Wiki.Shared.UserControls.Panel.InnerContentProperty, precedence);
+		private static void SetInnerContent(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.SetValue(instance, global::Wiki.Shared.UserControls.Panel.InnerContentProperty, value, precedence);
+		private static object GetHeader(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.GetValue(instance, global::Wiki.Shared.UserControls.Panel.HeaderProperty, precedence);
+		private static void SetHeader(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.SetValue(instance, global::Wiki.Shared.UserControls.Panel.HeaderProperty, value, precedence);
+		private static object GetIsOpenable(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.GetValue(instance, global::Wiki.Shared.UserControls.Panel.IsOpenableProperty, precedence);
+		private static void SetIsOpenable(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.SetValue(instance, global::Wiki.Shared.UserControls.Panel.IsOpenableProperty, value, precedence);
+	}
+
+	/// <summary>
+	/// Builder for Wiki.Shared.UserControls.Qualifiers
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_572
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(138, typeof(global::Wiki.Shared.UserControls.Qualifiers));
+			MetadataBuilder_233.Build(bindableType); // global::Windows.UI.Xaml.Controls.UserControl
+			if(parent == null)
+			{
+				bindableType.AddActivator(CreateInstance);
+			}
+			bindableType.AddProperty("Values", typeof(global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.QualifierItemViewModel>),  GetValues, SetValues);
+			return bindableType;
+		}
+		private static object CreateInstance() => new global::Wiki.Shared.UserControls.Qualifiers();
+		private static object GetValues(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.GetValue(instance, global::Wiki.Shared.UserControls.Qualifiers.ValuesProperty, precedence);
+		private static void SetValues(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.SetValue(instance, global::Wiki.Shared.UserControls.Qualifiers.ValuesProperty, value, precedence);
+	}
+
+	/// <summary>
+	/// Builder for Wiki.Shared.UserControls.References
+	/// </summary>
+	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+	static class MetadataBuilder_573
+	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build()
+		{
+			return Build(null);
+		}
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
+		internal static global::Uno.UI.DataBinding.IBindableType Build(global::Uno.UI.DataBinding.BindableType parent)
+		{
+			var bindableType = parent ?? new global::Uno.UI.DataBinding.BindableType(138, typeof(global::Wiki.Shared.UserControls.References));
+			MetadataBuilder_233.Build(bindableType); // global::Windows.UI.Xaml.Controls.UserControl
+			if(parent == null)
+			{
+				bindableType.AddActivator(CreateInstance);
+			}
+			bindableType.AddProperty("Values", typeof(global::System.Collections.ObjectModel.ObservableCollection<Wiki.BLL.ViewModels.ReferenceItemViewModel>),  GetValues, SetValues);
+			return bindableType;
+		}
+		private static object CreateInstance() => new global::Wiki.Shared.UserControls.References();
+		private static object GetValues(object instance,  Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.GetValue(instance, global::Wiki.Shared.UserControls.References.ValuesProperty, precedence);
+		private static void SetValues(object instance, object value, Windows.UI.Xaml.DependencyPropertyValuePrecedences? precedence) => Windows.UI.Xaml.DependencyObjectExtensions.SetValue(instance, global::Wiki.Shared.UserControls.References.ValuesProperty, value, precedence);
 	}
 
 	[System.Runtime.CompilerServices.CompilerGeneratedAttribute]
@@ -23905,7 +24720,7 @@ namespace Wiki.Wasm
 	[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
 	public class BindableMetadataProvider : global::Uno.UI.DataBinding.IBindableMetadataProvider
 	{
-		static global::System.Collections.Hashtable _bindableTypeCacheByFullName = new global::System.Collections.Hashtable(540);
+		static global::System.Collections.Hashtable _bindableTypeCacheByFullName = new global::System.Collections.Hashtable(562);
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification="Must be ignored even if generated code is checked.")]
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Justification = "Must be ignored even if generated code is checked.")]
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Justification = "Must be ignored even if generated code is checked.")]
@@ -24474,7 +25289,30 @@ namespace Wiki.Wasm
 			_bindableTypeCacheByFullName["Windows.UI.Xaml.Shapes.Polyline"] = CreateMemoized(MetadataBuilder_547.Build);
 			_bindableTypeCacheByFullName["Windows.UI.Xaml.Shapes.Rectangle"] = CreateMemoized(MetadataBuilder_548.Build);
 			_bindableTypeCacheByFullName["Windows.UI.Xaml.Wasm.SvgElement"] = CreateMemoized(MetadataBuilder_549.Build);
-			_bindableTypeCacheByFullName["Wiki.MainPage"] = CreateMemoized(MetadataBuilder_550.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.SearchComponentViewModel"] = CreateMemoized(MetadataBuilder_550.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.ViewModelBase"] = CreateMemoized(MetadataBuilder_551.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.ClaimItemViewModel"] = CreateMemoized(MetadataBuilder_552.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.AudioClaimDataItemViewModel"] = CreateMemoized(MetadataBuilder_553.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.ClaimDataItemViewModel"] = CreateMemoized(MetadataBuilder_554.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.EntityClaimDataItemViewModel"] = CreateMemoized(MetadataBuilder_555.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.ImageClaimDataItemViewModel"] = CreateMemoized(MetadataBuilder_556.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.QualifierItemViewModel"] = CreateMemoized(MetadataBuilder_557.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.QuantityClaimDataItemViewModel"] = CreateMemoized(MetadataBuilder_558.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.ReferenceItemViewModel"] = CreateMemoized(MetadataBuilder_559.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.StringClaimDataItemViewModel"] = CreateMemoized(MetadataBuilder_560.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.UnknownClaimDataItemViewModel"] = CreateMemoized(MetadataBuilder_561.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.VideoClaimDataItemViewModel"] = CreateMemoized(MetadataBuilder_562.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.CommonDataItemViewModel"] = CreateMemoized(MetadataBuilder_563.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.EntityItemViewModel"] = CreateMemoized(MetadataBuilder_564.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.SearchResultItemViewModel"] = CreateMemoized(MetadataBuilder_565.Build);
+			_bindableTypeCacheByFullName["Wiki.BLL.ViewModels.EntityPageViewModel"] = CreateMemoized(MetadataBuilder_566.Build);
+			_bindableTypeCacheByFullName["Wiki.Shared.Pages.EntityPage"] = CreateMemoized(MetadataBuilder_567.Build);
+			_bindableTypeCacheByFullName["Wiki.Shared.UserControls.ClaimObject"] = CreateMemoized(MetadataBuilder_568.Build);
+			_bindableTypeCacheByFullName["Wiki.Shared.UserControls.Fieldset"] = CreateMemoized(MetadataBuilder_569.Build);
+			_bindableTypeCacheByFullName["Wiki.Shared.UserControls.NavMenu"] = CreateMemoized(MetadataBuilder_570.Build);
+			_bindableTypeCacheByFullName["Wiki.Shared.UserControls.Panel"] = CreateMemoized(MetadataBuilder_571.Build);
+			_bindableTypeCacheByFullName["Wiki.Shared.UserControls.Qualifiers"] = CreateMemoized(MetadataBuilder_572.Build);
+			_bindableTypeCacheByFullName["Wiki.Shared.UserControls.References"] = CreateMemoized(MetadataBuilder_573.Build);
 		}
 		#if DEBUG
 		private global::System.Collections.Generic.List<global::System.Type> _knownMissingTypes = new global::System.Collections.Generic.List<global::System.Type>();

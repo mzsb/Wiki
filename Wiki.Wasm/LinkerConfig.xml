@@ -1,5 +1,9 @@
 ﻿<linker>
   <assembly fullname="Wiki.Wasm" />
+  <assembly fullname="System.Net.Http"/>
+  <assembly fullname="Wiki.BLL">
+    <type fullname="*"/>
+  </assembly>
   <assembly fullname="Uno.UI" />
 
   <assembly fullname="System.Core">

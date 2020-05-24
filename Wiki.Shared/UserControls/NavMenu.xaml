@@ -1,0 +1,80 @@
+﻿<UserControl
+    x:Class="Wiki.Shared.UserControls.NavMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Wiki.Shared.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodels="using:Wiki.BLL.ViewModels"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid Background="{StaticResource LightBlue}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0"
+              Background="White"
+              Height="50"
+              VerticalAlignment="Top">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <HyperlinkButton Grid.Column="0" 
+                             Content="WikiAssembly"
+                             FontSize="26"
+                             Foreground="{StaticResource LinkBlue}"
+                             FontFamily="MS PGothic"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"
+                             Click="LabelClicked"
+                             Margin="10,0,0,0"/>
+
+            <AutoSuggestBox Grid.Column="1"
+                            Width="400"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            PlaceholderText="Search"
+                            TextChanged="TextChanged"
+                            ItemsSource="{x:Bind viewModel.SearchResultItemViewModels}"
+                            SuggestionChosen="SuggestionChosen">
+
+                <AutoSuggestBox.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Background" Value="{StaticResource White}"/>
+                    </Style>
+                </AutoSuggestBox.ItemContainerStyle>
+                
+                <AutoSuggestBox.ItemTemplate>
+                    <DataTemplate x:DataType="viewmodels:SearchResultItemViewModel">
+                        <StackPanel Orientation="Vertical" 
+                                    Background="White">
+                                
+                            <TextBlock Text="{x:Bind Label}"
+                                       Foreground="Black"
+                                       FontSize="16"/>
+
+                            <TextBlock Text="{x:Bind Description}"
+                                       FontStyle="Italic"
+                                       Foreground="Gray"
+                                       FontSize="14"/>
+                            
+                        </StackPanel>
+                    </DataTemplate>
+                </AutoSuggestBox.ItemTemplate>
+                    
+                </AutoSuggestBox>
+
+        </Grid>
+        
+        <ContentControl Grid.Row="1"
+                        Background="Transparent"
+                        Content="{x:Bind InnerContent}" />
+    </Grid>
+</UserControl>

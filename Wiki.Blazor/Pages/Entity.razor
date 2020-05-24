@@ -1,0 +1,175 @@
+﻿@page "/entity/{id}"
+@inject NavigationManager navigationManager
+@inject EntityPageViewModel viewModel
+@inject IJSRuntime JSRuntime;
+
+@if (Loading)
+{
+    <RadzenProgressBar Value="100"
+                       ShowValue="false"
+                       Mode="ProgressBarMode.Indeterminate" />
+}
+else
+{
+    <h1>@viewModel.EntityItemViewModel.Label</h1>
+
+    <RadzenFieldset AllowCollapse="true">
+        <HeaderTemplate>
+            Common datas
+        </HeaderTemplate>
+        <ChildContent>
+            <RadzenDataList WrapItems="false"
+                            Data="@viewModel.EntityItemViewModel.CommonDatas"
+                            TItem="CommonDataItemViewModel">
+                <Template Context="data">
+                    <RadzenCard>
+                        <div class="row">
+                            <div class="col-md-6">
+                                Title
+                                <br />
+                                <b>@data.Label</b>
+                                <br /><br />
+                                Description
+                                <br />
+                                <b>@data.Description</b>
+                            </div>
+                            <div class="col-md-6">
+                                Aliases
+                                <br />
+                                <b>@data.AliasesStringList</b>
+                                <br /><br />
+                                SiteLink
+                                <br />
+                                <b>@data.SiteLink</b>
+                            </div>
+                        </div>
+                    </RadzenCard>
+                </Template>
+            </RadzenDataList>
+        </ChildContent>
+    </RadzenFieldset>
+
+    <RadzenFieldset AllowCollapse="true">
+        <HeaderTemplate>
+            Statements
+        </HeaderTemplate>
+        <ChildContent>
+            <RadzenGrid Responsive="false"
+                        AllowFiltering="true"
+                        FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive"
+                        AllowSorting="true"
+                        Data="@viewModel.EntityItemViewModel.Claims"
+                        TItem="ClaimItemViewModel">
+
+                <Columns>
+
+                    <RadzenGridColumn TItem="ClaimItemViewModel"
+                                      Property="PredicateSortProperty"
+                                      Title="Predicate">
+
+                        <Template Context="claimItemViewModel">
+
+                            @GetSpecificComponent(claimItemViewModel.Predicate)
+
+                        </Template>
+
+                    </RadzenGridColumn>
+
+                    <RadzenGridColumn TItem="ClaimItemViewModel"
+                                      Property="ObjectsSortProperty"
+                                      Title="Object">
+
+                        <Template Context="claimItemViewModel">
+                            @foreach (var claimData in claimItemViewModel.Objects)
+                            {
+                                <Radzen.Blazor.RadzenCard>
+
+                                    <h6 class="rank">(@claimData.Rank)</h6>
+
+                                    @GetSpecificComponent(claimData)
+
+                                    @if (claimData.Qualifiers.Any())
+                                    {
+                                        <Wiki.Blazor.Components.Claim.Qualifier Qualifiers="claimData.Qualifiers"
+                                                                                GetSpecificComponent="GetSpecificComponent" />
+                                    }
+
+                                    @if (claimData.References.Any())
+                                    {
+                                        <Wiki.Blazor.Components.Claim.Reference References="claimData.References"
+                                                                                GetSpecificComponent="GetSpecificComponent" />
+                                    }
+
+                                </Radzen.Blazor.RadzenCard>
+                            }
+                        </Template>
+
+                    </RadzenGridColumn>
+
+                </Columns>
+
+            </RadzenGrid>
+        </ChildContent>
+    </RadzenFieldset>
+}
+
+@code
+{
+    [Parameter]
+    public string Id { get; set; }
+
+    public bool Loading { get; set; } = true;
+
+    protected async override Task OnParametersSetAsync()
+    {
+        Loading = true;
+        await viewModel.LoadEntity(Id);
+        Loading = false;
+    }
+
+
+    private RenderFragment GetSpecificComponent(ClaimDataItemViewModel claimData) => builder =>
+    {
+        ClaimDataItemViewModel viewModel = new UnknownClaimDataItemViewModel();
+        ComponentBase component = new Components.Claim.UnknownClaim();
+        if (claimData is EntityClaimDataItemViewModel entityClaimData)
+        {
+            component = new Components.Claim.EntityClaim();
+            viewModel = entityClaimData;
+        }
+        else if (claimData is StringClaimDataItemViewModel stringClaimData)
+        {
+            component = new Components.Claim.StringClaim();
+            viewModel = stringClaimData;
+        }
+        else if (claimData is QuantityClaimDataItemViewModel quantityClaimData)
+        {
+            component = new Components.Claim.QuantityClaim();
+            viewModel = quantityClaimData;
+        }
+        else if (claimData is ImageClaimDataItemViewModel imageClaimData)
+        {
+            component = new Components.Claim.ImageClaim();
+            viewModel = imageClaimData;
+        }
+        else if (claimData is AudioClaimDataItemViewModel audioClaimData)
+        {
+            component = new Components.Claim.AudioClaim();
+            viewModel = audioClaimData;
+        }
+        else if (claimData is VideoClaimDataItemViewModel videoClaimData)
+        {
+            component = new Components.Claim.VideoClaim();
+            viewModel = videoClaimData;
+        }
+        else if (claimData is UnknownClaimDataItemViewModel unknownClaimData)
+        {
+            component = new Components.Claim.UnknownClaim();
+            viewModel = unknownClaimData;
+        }
+
+        builder.OpenComponent(0, component.GetType());
+        builder.AddAttribute(1, "ViewModel", viewModel);
+        builder.CloseComponent();
+    };
+}
