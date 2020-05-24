@@ -35,10 +35,10 @@ namespace Wiki.BLL.Services
 
         private string GetUrl(string id,
                       string language) =>
-           $"{_mediaWikiUrl}?" +
+           Uri.EscapeDataString($"{_mediaWikiUrl}?" +
                                  $"action=wbsearchentities&" +
                                  $"search={id}&" +
                                  $"language={language}&" +
-                                 $"format=json";
+                                 $"format=json");
     }
 }

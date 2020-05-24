@@ -55,26 +55,26 @@ namespace Wiki.BLL.Services
         }
 
         private string GetListParameter<T>(List<T> list, 
-                                           int startIndex = 0, 
-                                           int limit = 0) =>
+                                            int startIndex = 0, 
+                                            int limit = 0) =>
             list?.GetRange(startIndex,
-                           Math.Min(_parameterLenghtLimit, 
+                            Math.Min(_parameterLenghtLimit, 
                                     limit < 1 ? 
-                                   list.Count : 
-                                   limit))
+                                    list.Count : 
+                                    limit))
             ?.ToString("|");
 
         private string GetUrl(string ids, 
                               List<string> languages = null, 
                               List<string> porperties = null) =>
-            $"{_mediaWikiUrl}?" +
+            Uri.EscapeDataString($"{_mediaWikiUrl}?" +
                                  $"action=wbgetentities&" +
                                  $"ids={ids}&" +
                                  (porperties is null ?
                                             $"" :
                                             $"props={GetListParameter(porperties)}&") +
                                  $"languages={GetListParameter(languages) ?? "en"}&" +
-                                 $"format=json";
+                                 $"format=json");
 
         private List<string> GetIdsFromClaims(Dictionary<string, List<Claim>> claims)
         {
